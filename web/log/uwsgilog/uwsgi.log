@@ -1,4 +1,4 @@
-*** Starting uWSGI 2.0.25.1 (64bit) on [Wed Apr 24 20:23:31 2024] ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:37:54 2024] ***
 compiled with version: 11.4.0 on 21 April 2024 10:48:15
 os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
 nodename: yuhang-virtual-machine
@@ -15,5 +15,664 @@ your memory page size is 4096 bytes
 detected max file descriptor number: 1048576
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
-probably another instance of uWSGI is running on the same address (0.0.0.0:8080).
-bind(): Address already in use [core/socket.c line 769]
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34783 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5f31c594b450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63137)
+spawned uWSGI worker 1 (pid: 63139, cores: 2)
+spawned uWSGI worker 2 (pid: 63140, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63141)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+*** no app loaded. going in full dynamic mode ***
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:40:26 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:33099 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x56123b16a450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63211)
+spawned uWSGI worker 1 (pid: 63214, cores: 2)
+spawned uWSGI worker 2 (pid: 63215, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63216)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:41:48 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44673 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5fe37a2d5450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63299)
+spawned uWSGI worker 1 (pid: 63300, cores: 2)
+spawned uWSGI worker 2 (pid: 63301, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63302)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:42:28 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40715 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x582fdf996450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63373)
+spawned uWSGI worker 1 (pid: 63375, cores: 2)
+spawned uWSGI worker 2 (pid: 63376, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63377)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:43:15 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40131 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x65363d622ae0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63489)
+spawned uWSGI worker 1 (pid: 63491, cores: 2)
+spawned uWSGI worker 2 (pid: 63492, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63493)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:46:27 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:35731 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x61dfd2f03450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63695)
+spawned uWSGI worker 1 (pid: 63697, cores: 2)
+spawned uWSGI worker 2 (pid: 63698, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63699)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/./app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/./app.py", line 3, in <module>
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:47:19 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34993 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x62fe66e24c20
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63780)
+spawned uWSGI worker 1 (pid: 63784, cores: 2)
+spawned uWSGI worker 2 (pid: 63785, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63787)
+Python auto-reloader enabled
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/./app.py", line 3, in <module>
+Traceback (most recent call last):
+  File "/home/yuhang/python_study/web/./app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:47:39 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:40427 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5a32f5c51450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63858)
+spawned uWSGI worker 1 (pid: 63860, cores: 2)
+spawned uWSGI worker 2 (pid: 63861, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 63862)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:49:24 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43147 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5c98fe6fc450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 64054)
+spawned uWSGI worker 1 (pid: 64056, cores: 2)
+spawned uWSGI worker 2 (pid: 64057, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 64058)
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+Traceback (most recent call last):
+  File "app.py", line 3, in <module>
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    import Account
+  File "/home/yuhang/python_study/web/./Account.py", line 2, in <module>
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    import Config
+  File "/home/yuhang/python_study/web/./Config.py", line 9, in <module>
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+    gdb = web.database(
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1479, in database
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    return _databases[dbn](**params)
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1245, in __init__
+    db = import_driver(mysql_drivers, preferred=keywords.pop("driver", None))
+  File "/home/yuhang/.local/lib/python3.10/site-packages/web/db.py", line 1291, in import_driver
+    raise ImportError("Unable to import " + " or ".join(drivers))
+ImportError: Unable to import pymysql or MySQLdb or mysql.connector
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** Starting uWSGI 2.0.25.1 (64bit) on [Thu Apr 25 16:54:35 2024] ***
+compiled with version: 11.4.0 on 21 April 2024 10:48:15
+os: Linux-6.5.0-27-generic #28~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 15 10:51:06 UTC 2
+nodename: yuhang-virtual-machine
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/yuhang/python_study/web
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/yuhang/python_study/web
+your processes number limit is 15183
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:37623 (port auto-assigned) fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5d04fdc9d450
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 422160 bytes (412 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 64153)
+spawned uWSGI worker 1 (pid: 64155, cores: 2)
+spawned uWSGI worker 2 (pid: 64156, cores: 2)
+*** Stats server enabled on 127.0.0.1:9090 fd: 14 ***
+spawned uWSGI http 1 (pid: 64157)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5d04fdc9d450 pid: 64155 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5d04fdc9d450 pid: 64156 (default app)
+[pid: 64156|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 472 bytes} [Thu Apr 25 16:54:50 2024] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 44 bytes (1 switches on core 0)
