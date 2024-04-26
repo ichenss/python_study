@@ -5,7 +5,6 @@ import AccountCfg
 import re
 import datetime
 import DBManage
-import Error
 import ErrorCfg
 
 def CheckPhonenum(phonenum):
@@ -98,4 +97,14 @@ def VerifyAccount(userid, password):
         return {'code':ErrorCfg.EC_LOGIN_USERID_ERROR, 'reason':ErrorCfg.ER_LOGIN_USERID_ERROR}
     if result[0]['password'] != password:
         return {'code':ErrorCfg.EC_LOGIN_PASSWORD_ERROR, 'reason':ErrorCfg.ER_LOGIN_PASSWORD_ERROR}
+    return {'code':0}
+
+def HandleLogin(userid):
+    now = datetime.datetime.now()
+    Config.gdb.update(
+        "user",
+        lastlogintime = now,
+        where = "userid=$userid",
+        vars = dict(userid=userid)
+    )
     return {'code':0}

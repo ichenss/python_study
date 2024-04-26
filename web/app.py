@@ -9,8 +9,8 @@ import logging.config
 
 urls = (
     '/(.*)', 'hello',
-    '/register', 'Register'
-    '/login', 'Login'
+    '/register', 'Register',
+    '/login', 'Login',
 )
 
 app = web.application(urls, globals())
@@ -32,7 +32,7 @@ class hello:
         if not name:
             name = 'World'
         return 'Hello,' + name
-    
+
 class Register:
     @CatchError
     def POST(self):
@@ -72,5 +72,7 @@ class Login:
             return Error.ErrResult(result['code'], result['reason'])
         
         # 登录处理
+        result = Account.HandleLogin(userid)
+        if result['code'] != 0:
+            return Error.ErrResult(result['code'], result['reason'])
         return json.dumps({'code':0})
-    
