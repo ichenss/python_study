@@ -4,14 +4,28 @@ import Account
 import json
 import ErrorCfg
 import Error
+import logging
+import logging.config
 
 urls = (
     '/(.*)', 'hello',
     '/register', 'Register'
+    '/login', 'Login'
 )
 
 app = web.application(urls, globals())
 application = app.wsgifunc()
+
+logging.config.fileConfig('logging.conf')
+logger = logging.getLogger('applog')
+
+def CatchError(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            logger.exception(e)            
+    return wrapper
 
 class hello:
     def GET(self, name):
@@ -20,6 +34,7 @@ class hello:
         return 'Hello,' + name
     
 class Register:
+    @CatchError
     def POST(self):
         req = web.input(phonenum='', password='', nick='', sex='', idcard='')
         phonenum = req.phonenum
@@ -44,8 +59,18 @@ class Register:
             return Error.ErrResult(ErrorCfg.EC_REGISTER_PASSWORD_TYPE_ERROR, ErrorCfg.ER_REGISTER_PASSWORD_TYPE_ERROR)
 
         # 注册账号
-        
+        Account.InitUser(phonenum, password, nick, sex, idcard)
         return json.dumps({'code':0})
         
-# if __name__ == "__main__":
-#     app.run()
+class Login:
+    def POST(self):
+        req = web.input(userid = '', password = '')
+        userid = req.userid
+        password = req.password
+        result = Account.VerifyAccount(userid, password)
+        if result['code'] != 0:
+            return Error.ErrResult(result['code'], result['reason'])
+        
+        # 登录处理
+        return json.dumps({'code':0})
+    

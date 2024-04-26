@@ -1,7 +1,12 @@
 #-*- coding:utf-8 -*-
+from errno import errorcode
 import Config
 import AccountCfg
 import re
+import datetime
+import DBManage
+import Error
+import ErrorCfg
 
 def CheckPhonenum(phonenum):
     phonelist = [139, 138, 137, 136, 134, 135, 147, 150, 151, 152, 157, 158, 159, 172, 178,
@@ -13,11 +18,14 @@ def CheckPhonenum(phonenum):
         return True
     else:
         return False
-    
-    
+       
 def CheckUserIdNotRepeat(userid):
     #检测账号是否重复
-    pass
+    result = Config.gdb.select("user", where = "userid=$userid", vars=dict(userid=userid), what='count(*) as num')
+    # Config.gdb.query("select count(*) as num from user where userid = {}".format(userid))
+    if result and result[0].num >= 1:
+        return False
+    return True
     
 def CheckIdCard(idcard):
     stridcard = str(idcard)
@@ -72,11 +80,22 @@ def CheckIdCard(idcard):
     else:
         return False
 
-    
-    
 def CheckPassword(password):
     #字母和数字组合，8-16位
     pattern = re.compile('^(?=.*[0-9])(?=.*[A-z])[0-9a-zA-Z]{8,16}$')
     if re.match(pattern, password):
         return True
     return False
+
+def InitUser(phonenum, password, nick, sex, idcard):
+    now = datetime.datetime.now()
+    DBManage.InsertRegisterUser(phonenum, password, nick, sex, idcard, now)
+    # 初始化用户背包
+
+def VerifyAccount(userid, password):
+    result = Config.gdb.select("user", what = "password", vars = dict(userid=userid), where = "userid=$userid")
+    if not result:
+        return {'code':ErrorCfg.EC_LOGIN_USERID_ERROR, 'reason':ErrorCfg.ER_LOGIN_USERID_ERROR}
+    if result[0]['password'] != password:
+        return {'code':ErrorCfg.EC_LOGIN_PASSWORD_ERROR, 'reason':ErrorCfg.ER_LOGIN_PASSWORD_ERROR}
+    return {'code':0}
